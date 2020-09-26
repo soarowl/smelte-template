@@ -1,10 +1,13 @@
 <script>
-  import { Button, Checkbox, Switch, Snackbar } from "smelte";
+  import { Button, Switch, Snackbar } from "smelte";
+  import Header from "./Header.svelte";
+
   export let name;
 
   let showSnackbar = false;
 </script>
 
+<Header />
 <div class="container mx-auto h-full items-center">
   <h1>Hello {name}!</h1>
   <h2>Hello {name}!</h2>
