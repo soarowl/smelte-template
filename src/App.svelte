@@ -22,9 +22,9 @@
   <Button on:click={() => (showSnackbar = true)}>Show snackbar</Button>
 
   <Snackbar bind:value={showSnackbar}>
-  <div>Have a nice day.</div>
-  <div slot="action">
-    <Button text on:click={() => (showSnackbar = false)}>Dismiss</Button>
-  </div>
-</Snackbar>
+    <div>Have a nice day.</div>
+    <div slot="action">
+      <Button text on:click={() => (showSnackbar = false)}>Dismiss</Button>
+    </div>
+  </Snackbar>
 </div>

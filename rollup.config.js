@@ -14,18 +14,18 @@ export default {
     sourcemap: true,
     format: "iife",
     name: "app",
-    file: "public/bundle.js"
+    file: "public/bundle.js",
   },
   plugins: [
     svelte({
       // enable run-time checks when not in production
       dev: !production,
-      css: css => {
-        css.write("public/components.css");
-      }
+      css: (css) => {
+        css.write("components.css");
+      },
     }),
     smelte({
-      output: "public/global.css"
+      output: "public/global.css",
     }),
 
     // If you have external dependencies installed from
@@ -42,9 +42,9 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
+    production && terser(),
   ],
   watch: {
-    clearScreen: false
-  }
+    clearScreen: false,
+  },
 };
